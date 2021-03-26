@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
     <title>Food Ninja</title>
   </head>
   <body class="text-gray-600 font-nunito h-full">
@@ -16,7 +17,7 @@
     <div class="grid md:grid-cols-3">
       <div class="md:col-span-1 md:flex md:justify-end">
         <nav class="text-right">
-          <div>
+          <div class="flex justify-between items-center">
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <a
                 href="/"
@@ -24,8 +25,12 @@
                 >Food Ninja</a
               >
             </h1>
+            <i
+              class="bx bx-menu bx-sm md:hidden px-4 cursor-pointer"
+              id="burger"
+            ></i>
           </div>
-          <ul class="text-sm mt-6">
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
             <li class="text-black pb-2">
               <a
                 href="#"
@@ -134,7 +139,7 @@
           </div>
           <div class="flex justify-center">
             <div
-              class="btn bg-secondary-100 text-secondary-200 p-1 rounded-sm hover:shadow-inner"
+              class="btn bg-secondary-100 text-secondary-200 p-1 rounded-sm hover:shadow-inner transform hover:scale-105 hover:bg-opacity-50 transition ease-in-out duration-200"
             >
               Load More
             </div>
